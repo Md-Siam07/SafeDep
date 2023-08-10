@@ -1,0 +1,12 @@
+version: '3.10'
+services:
+  ml-app:
+    build: .
+    image: ml-app:latest
+    ports:
+      - 8501:8501
+    volumes:
+      - .:/app
+
+# docker-compose down && docker-compose up
+# http://localhost:8501/

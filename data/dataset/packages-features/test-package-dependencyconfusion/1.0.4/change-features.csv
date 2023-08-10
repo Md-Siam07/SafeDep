@@ -1,0 +1,10 @@
+PII,0
+file_sys_access,1
+file_process_creation,1
+network_access,0
+cryptographic_functionality,0
+data_encoding,1
+dynamic_code_generation,0
+package_installation,0
+is_minified_code,0
+is_has_no_content,0
