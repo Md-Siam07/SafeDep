@@ -1,4 +1,4 @@
-# Artifact: Practical Automated Detection of Malicious npm Packages
+<!-- # Artifact: Practical Automated Detection of Malicious npm Packages
 
 This is the artifact for our ICSE '22 paper "Practical Automated Detection of Malicious npm Packages", which presents an approach to automatically detecting malicious npm packages based on a combination of three components: machine-learning classifiers trained on known samples of malicious and benign npm packages; a reproducer for identifying packages that can be rebuilt from source and hence are unlikely to be malicious; and a clone detector for finding copies of known malicious packages.
 
@@ -14,13 +14,13 @@ The artifact does _not_ contain the feature-extraction code, the contents and fe
 
 This is implemented as a Python script [`code/trainining/train_classifier.py`](code/training/train_classifier.py). Invoking the script with the `--help` option prints out an explanation of the various supported command-line flags. Note that this code is for reference purposes only and cannot be used to replicate our results, since it needs as its input features for the samples comprising the training set, which are not included in the artifact as explained below.
 
-### Code for reproducing packages 
+### Code for reproducing packages
 
 The reproducer is implemented as a Shell script [`code/reproducer/reproduce-package.sh`](code/reproducer/reproduce-package.sh) that, given a package name and a version, uses an auxiliary script [`code/reproducer/build-package.sh`](code/reproducer/build-package.sh) to rebuild the package from source, and then compares the result to the published package.
 
 ### Code for detecting clones
 
-The clone detector is implemented as a Python script [`code/clone-detector/hash_package.py`](code/clone-detector/hash_package.py) which computes an MD5 hash for a package. 
+The clone detector is implemented as a Python script [`code/clone-detector/hash_package.py`](code/clone-detector/hash_package.py) which computes an MD5 hash for a package.
 
 ### Description of basic corpus
 
@@ -40,13 +40,13 @@ The directory [`results/cross-validation`](results/cross-validation) contains th
 
 Finally, the directory [`results/maloss`](results/maloss) contains the results from running our classifiers on the MalOSS dataset from Duan et al.'s paper "Towards Measuring Supply Chain Attacks on Package Managers for Interpreted Languages". As for the cross-validation experiment, there is one TSV file per classifier, with the same three columns as above.
 
-Taken together, these files total less than 1MB of data. 
+Taken together, these files total less than 1MB of data.
 
-### Performance measurements 
+### Performance measurements
 
-The directory [`results/timing`](results/timing) has logs of the time it took for the different stages of Experiment 1. The files [`results/timing/extract_features_time.csv`](results/timing/extract_features_time.csv) and [`results/timing/extract_diffs_time.csv`](results/timing/extract_diffs_time.csv) list the timings for extracting the features and the difference of features between versions, respectively, for ~500 random packages. The subdirectories each contain the times for training (directory _training_) amd prediction (directory _prediction_) for each classifier. 
+The directory [`results/timing`](results/timing) has logs of the time it took for the different stages of Experiment 1. The files [`results/timing/extract_features_time.csv`](results/timing/extract_features_time.csv) and [`results/timing/extract_diffs_time.csv`](results/timing/extract_diffs_time.csv) list the timings for extracting the features and the difference of features between versions, respectively, for ~500 random packages. The subdirectories each contain the times for training (directory _training_) amd prediction (directory _prediction_) for each classifier.
 
-The files amount to about 6MB. 
+The files amount to about 6MB.
 
 ## What is not included
 
@@ -64,5 +64,6 @@ For the same reason, we were not able to include the feature-extraction code.
 
 ## Trained classifiers
 
-Finally, the classifiers trained on the basic corpus and as part of Experiment 1 can, unfortunately, also not be made public, again due to concerns about abuse by malicious parties.
+Finally, the classifiers trained on the basic corpus and as part of Experiment 1 can, unfortunately, also not be made public, again due to concerns about abuse by malicious parties. -->
+
 # SafeDep
