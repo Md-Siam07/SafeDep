@@ -1,0 +1,2 @@
+package,version,PII,file_sys_access,file_process_creation,network_access,cryptographic_functionality,data_encoding,dynamic_code_generation,package_installation,geolocation,minified_code,no_content,longest_line,num_of_files,has_license,label
+ngx-normalize-git-url,3.0.2,0,0,0,0,0,0,0,0,0,0,0,165492,2406,1,benign

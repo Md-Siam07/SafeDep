@@ -173,8 +173,9 @@ def extract_package_details(package_name: str) -> tuple:
         ('package', '1.0')
     """
     logging.debug("start func: extract_package_details")
-
-    name, version = package_name.split('-v-')
+    print('package-name: ',package_name)
+    # name, version = package_name.split('-v-')
+    name, version = package_name.rsplit('@')
     return (name, version)
 
 def write_dict_to_csv(dict_data, csv_file, headers, method='w') -> None:

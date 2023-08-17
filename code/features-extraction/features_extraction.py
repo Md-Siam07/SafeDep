@@ -362,6 +362,7 @@ def extract_features(root_dir: str, malicious: bool) -> None:
             # check if the current package name already exists in the package_features dictionary
             if package_name not in package_features:
                 # if not, initialize a list of NUM_OF_FEATURES_INCLUDE elements with value 0
+                print('not init')
                 init_lst = [0] * NUM_OF_FEATURES_INCLUDE
                 package_features[package_name] = init_lst
             
@@ -441,6 +442,7 @@ if __name__ == '__main__':
     # malicious_path = '/Users/liozakirav/Documents/computer-science/fourth-year/Cyber/Tasks/Final-Project/amalfi-artifact/data/extracted-packages/validation_data/malicious'
     # extract_features(benign_path, malicious=False)
     # extract_features(malicious_path, malicious=True)
-    benign_path = '/Users/mdsiam/Desktop/Projects/amalfi-artifact/code/reproducer/packages'
+    # benign_path = '/Users/mdsiam/Desktop/Projects/amalfi-artifact/code/reproducer/packages'
+    benign_path = '../reproducer/packages/benign'
     extract_features(benign_path, malicious=False)
     
